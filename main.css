@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --lexend: 'Lexend Deca', sans-serif;
+  --title-font: 'Big Shoulders Display', cursive;
+}
+html {
+  font-size: 15px;
+}
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: hsl(0, 0%, 95%);
+  display: grid;
+  place-items: center;
+}
+
+/* The Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 22rem;
+  border-radius: 7px;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+.container > div {
+  min-height: 23em;
+  padding: 3rem;
+}
+.container:is(h2 ,p ,a) {
+  opacity: .6;
+}
+h2 {
+  font-family: var(--title-font);
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  font-size: 2.5rem;
+}
+.container p {
+  font-family: var(--lexend);
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5rem;
+  margin-bottom: 3rem;
+}
+.container a {
+  text-decoration: none;
+  font-family: var(--lexend);
+  font-weight: bold;
+  background-color: hsl(0, 0%, 95%);
+  padding: .8rem 2rem;
+  border-radius: 50px;
+}
+.icon {
+  width: 70px;
+  height: 44px;
+}
+
+/* Sedans Part */
+.container .sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+.sedans .icon {
+  background: url(/images/icon-sedans.svg) no-repeat bottom/contain;
+}
+.sedans a {
+  color: hsl(31, 77%, 52%);;
+}
+
+/* Suvs Part */
+.container .suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+.suvs .icon {
+  background: url(/images/icon-suvs.svg) no-repeat bottom/contain;
+}
+.suvs a {
+  color: hsl(184, 100%, 22%);;
+}
+
+/* Luxury Part */
+.container .luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+.luxury .icon {
+  background: url(/images/icon-luxury.svg) no-repeat bottom/contain;
+}
+.luxury a {
+  color: hsl(179, 100%, 13%);;
+}
+
+/* Responsivity */
+
+@media screen and (min-width: 375px) {
+   .container {
+    max-width: 60rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+   }
+}
